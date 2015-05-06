@@ -45,9 +45,8 @@ public class TestJPA {
 	 * @author YOSRA
 	 *
 	 */
-	
 	@Test
-	public void test132() 
+	public void test159() 
 	{
 		//Test pour la configuration de la base des donnees
 		try
@@ -56,7 +55,7 @@ public class TestJPA {
 		        ClassPathXmlApplicationContext context=
 				new ClassPathXmlApplicationContext(new String[]{"applicationContext.xml"});
 
-		       
+		      
 		       
 		        IAdminMetier metier=(IAdminMetier) context.getBean("metier");
 		        
