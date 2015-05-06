@@ -233,14 +233,6 @@ public class EnfantAjoutForm
 	
 	
 	
-	if (ef.getLangue().equals("Arabe")){
-		model.addAttribute("enfants", metier.listEnfants(0, 4));
-	} else if (ef.getLangue().equals("Français")) {
-		model.addAttribute("enfants", metier.listEnfants(0, 4));
-	}else if (ef.getLangue().equals("Anglais")) {
-		model.addAttribute("enfants", metier.listEnfants(0, 4));
-	}
-	
 	model.addAttribute("enfantForm", new EnfantForm());
 	
 	
