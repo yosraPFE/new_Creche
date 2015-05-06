@@ -233,12 +233,12 @@ public class EnfantAffectationClubPlanningController {
 		Payment dernierPayment = metier.getPayementMoisCourant(idEnf, yearMounthString);
 		
 		if( dernierPayment == null){
-			System.out.println("pas de paiement creer cet mois");
+			//System.out.println("pas de paiement creer cet mois");
 			//pas de paiement creer cet mois
 			metier.ajouterPayment(newPayment, idEnf, yearMounthString);
 			
 		}else if (dernierPayment.getDatePayement() == null){
-			System.out.println("payment creer non paye --> mise à jour");
+			//System.out.println("payment creer non paye --> mise à jour");
 			//payment creer non paye --> mise à jour
 			newPayment.setEnfant(metier.getEnfant(idEnf));
 			newPayment.setMoisPayment(yearMounthString);			
@@ -246,7 +246,7 @@ public class EnfantAffectationClubPlanningController {
 			
 			
 		}else{
-			System.out.println("payment cree et payé --> creer le payment du mois suivant");
+			//System.out.println("payment cree et payé --> creer le payment du mois suivant");
 			//payment cree et payé --> creer le payment du mois suivant
 			
 			//construction du mois suivant

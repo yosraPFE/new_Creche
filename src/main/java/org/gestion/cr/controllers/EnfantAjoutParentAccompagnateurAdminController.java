@@ -84,19 +84,19 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 
 		setFirstParent(parentUn);
 		//setFirstParentFile(filep);
-		//System.out.println("Parent File "+filep.getOriginalFilename());
-		//System.out.println("Parent Enfant "+getEnfFile().getOriginalFilename());
+		////System.out.println("Parent File "+filep.getOriginalFilename());
+		////System.out.println("Parent Enfant "+getEnfFile().getOriginalFilename());
 		Long idFirstParent = addParent(parentUn,filep);
-		System.out.println("idFirstParent "+idFirstParent);
+		//System.out.println("idFirstParent "+idFirstParent);
 		
 		Long idEnfant = addEnfant(getUnEnfant(),getEnfFile());
-		System.out.println("idEnfant "+idEnfant);
+		//System.out.println("idEnfant "+idEnfant);
 		
 		
 		metier.ajouterParentsPourEnfant(idFirstParent, idEnfant);
 		
 		if(btnChoisi.equals("Valider")){
-			System.out.println("Valider ");
+			//System.out.println("Valider ");
 			model.addAttribute("enfant",new Enfant());
 			
 
@@ -108,7 +108,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			return "redirect:/adminInsA/index?idEnfant="+idEnfant;
 			
 		}else if(btnChoisi.equals("Ajouter_Autre_Parent")){
-			System.out.println("Ajouter_Autre_Parent ");
+			//System.out.println("Ajouter_Autre_Parent ");
 			setCas(2);
 			model.addAttribute("cas", getCas());
 			model.addAttribute("enfant", metier.getEnfant(idEnfant));
@@ -117,7 +117,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			model.addAttribute("parentDeux", new Parent());
 			return "enfantsAjoutValidator";
 		}else{
-			System.out.println("Ajouter_Accomp ");
+			//System.out.println("Ajouter_Accomp ");
 			setCas(3);
 			model.addAttribute("cas", getCas());
 			model.addAttribute("enfant", getUnEnfant());
@@ -133,7 +133,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 	@RequestMapping(value="/verifierParentDeux")
 	public String verifierParentDeux(@Valid @ModelAttribute("parentDeux")Parent parentDeux,BindingResult bindingResult,Model model, MultipartFile filep2, @RequestParam("btnChoisi") String btnChoisi) throws IOException
 	{
-		System.out.println("Debut ");
+		//System.out.println("Debut ");
 		
 		if(bindingResult.hasErrors())
 		{
@@ -152,7 +152,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 		metier.ajouterParentsPourEnfant(idSecondtParent, getUnEnfant().getIdPerson());
 		
 		if(btnChoisi.equals("Valider")){
-			System.out.println("Valider ");
+			//System.out.println("Valider ");
 			//model.addAttribute("enfant",new Enfant());
 			setCas(0);
 			model.addAttribute("cas", getCas());
@@ -160,7 +160,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			return "redirect:/adminInsA/index?idEnfant="+getUnEnfant().getIdPerson();
 			
 		}else{
-			System.out.println("Ajouter_Accomp ");
+			//System.out.println("Ajouter_Accomp ");
 			setCas(3);
 			model.addAttribute("cas", getCas());
 			model.addAttribute("enfant", getUnEnfant());
@@ -176,7 +176,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 	@RequestMapping(value="/verifierAccompagnateur")
 	public String verifierAccompagnateur(@Valid  @ModelAttribute("Accompagnateur") Accompagnateur accomp,BindingResult bindingResult,Model model, MultipartFile fileaccomp, @RequestParam("btnChoisi") String btnChoisi) throws IOException
 	{
-		System.out.println("Debut ");
+		//System.out.println("Debut ");
 		
 		if(bindingResult.hasErrors())
 		{
@@ -202,7 +202,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 		metier.ajouterAccompagnateursPourEnfant(idAccomp, getUnEnfant().getIdPerson());
 		
 		if(btnChoisi.equals("Valider")){
-			System.out.println("Valider ");
+			//System.out.println("Valider ");
 			model.addAttribute("enfant",new Enfant());
 			setCas(0);
 			model.addAttribute("cas", getCas());
@@ -291,21 +291,21 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 		Long idEnfant  = metier.ajouterEnfant(enf);
 		if(!getEnfFile().isEmpty())
 		{
-			System.out.println("file Enfant not Empty ");
-			System.out.println("Name file " + fileEnf.getOriginalFilename());
+			//System.out.println("file Enfant not Empty ");
+			//System.out.println("Name file " + fileEnf.getOriginalFilename());
 			String path ="D:/PFE/ImageEnfants";
 			
 			//getEnfFile().transferTo(new File(path +"/"+ "ENFANT_" + idEnfant + "_" + getEnfFile().getOriginalFilename()));
 			 File convFile = new File(path +"/"+ "ENFANT_" + idEnfant + "_" + fileEnf.getOriginalFilename());
-			 System.out.println("1 ");
+			 ////System.out.println("1 ");
 			 convFile.createNewFile(); 
-			 System.out.println("2 ");
+			 ////System.out.println("2 ");
 			    FileOutputStream fos = new FileOutputStream(convFile); 
-			    System.out.println("3 ");
+			   // //System.out.println("3 ");
 			    try {
 			    	 fos.write(fileEnf.getBytes());
 				} catch (Exception e) {
-					 System.out.println("problème de déplacement du fichier ");
+					 ////System.out.println("problème de déplacement du fichier ");
 				}
 			   
 			   
@@ -313,13 +313,13 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 
 			
 			
-			System.out.println("image Enfant Transfert !!! ");
+			////System.out.println("image Enfant Transfert !!! ");
 			Enfant f = metier.getEnfant(idEnfant);
 			f.setNomPhoto(path +"/"+ "ENFANT_" +idEnfant + "_" + fileEnf.getOriginalFilename());
-			System.out.println("image Enfant Seted !!! ");
+			//System.out.println("image Enfant Seted !!! ");
 			metier.modifierEnfant(f);
 			
-			System.out.println("image Enfant c bon !!! ");
+			//System.out.println("image Enfant c bon !!! ");
 		}
 		return idEnfant;
 	}
@@ -331,13 +331,13 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 		if(!filep.isEmpty())
 		{
 			
-			System.out.println("file Parent not Empty ");
+			//System.out.println("file Parent not Empty ");
 			String path ="C:/Users/YOSRA/Desktop/PFE/ImagesParents";
 			filep.transferTo(new File(path +"/"+ "PARENT_" + idParent + "_" + filep.getOriginalFilename()));
 			Parent pa = metier.getParent(idParent);
 			pa.setNomPhoto(path +"/"+ "PARENT_" +idParent + "_" + filep.getOriginalFilename());
 			metier.modifierParent(pa);
-			System.out.println("image Parent c bon !!! ");
+			//System.out.println("image Parent c bon !!! ");
 		}
 		return idParent;
 	}

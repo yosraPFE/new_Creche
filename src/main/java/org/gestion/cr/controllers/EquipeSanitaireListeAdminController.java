@@ -64,11 +64,11 @@ public class EquipeSanitaireListeAdminController implements HandlerExceptionReso
 		String referrerAffiliateId = null;
 		if (ref != null) 
 		{
-			System.out.println("1");
+			//System.out.println("1");
 			referrerAffiliateId = Long.toString(ref);
 			
 			if (file.isEmpty()) 
-			{			System.out.println("2");
+			{			//System.out.println("2");
 				EquipeSanitaire eqSau = metier.getEquipeSanitaire(eqSa
 					.getIdPerson());
 				
@@ -76,7 +76,7 @@ public class EquipeSanitaireListeAdminController implements HandlerExceptionReso
 			} 
 			else 
 			{
-				System.out.println("3");
+				//System.out.println("3");
 
 				String path = "C:/Users/YOSRA/Desktop/PFE/ImagesEqSanitaires";
 				file.transferTo(new File(path + "/" + "EqSANITAIR_"
@@ -86,7 +86,7 @@ public class EquipeSanitaireListeAdminController implements HandlerExceptionReso
 						+ eqSa.getIdPerson() + "_"
 						+ file.getOriginalFilename());
 			}
-			System.out.println(eqSa.getIdPerson());
+			//System.out.println(eqSa.getIdPerson());
 			metier.modifierEquipeSanitaire(eqSa);
 			
 			

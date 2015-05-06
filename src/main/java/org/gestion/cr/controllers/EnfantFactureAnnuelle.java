@@ -48,14 +48,14 @@ public class EnfantFactureAnnuelle
 		Creche crecheAnnee=metier.getCreche(year);
 		
 		
-		//System.out.println("crecheAnnee : " + crecheAnnee.getAnnee());
+		////System.out.println("crecheAnnee : " + crecheAnnee.getAnnee());
 		
 		
 		//avoir la liste des clubs actifs
 		
 		List<ClubEnfant> listClubActifsEnfant = metier.ListClubActifsEnfant(idEnf);
 		
-		//System.out.println("listClubActifsEnfant : " + listClubActifsEnfant.get(0).getClub().getNom());
+		////System.out.println("listClubActifsEnfant : " + listClubActifsEnfant.get(0).getClub().getNom());
 		
 
 		
@@ -64,7 +64,7 @@ public class EnfantFactureAnnuelle
 		//avoir la liste des planning actifs
 		
 		List<PlanningEnfant> listPlanningActifsEnfant = metier.ListPlanningActifsEnfant(idEnf);
-		//System.out.println("listPlanningActifsEnfant : " + listPlanningActifsEnfant.get(0).getPlanningHorraires().getTypePlanning());
+		////System.out.println("listPlanningActifsEnfant : " + listPlanningActifsEnfant.get(0).getPlanningHorraires().getTypePlanning());
 
 		
 		//avoir remise et prix total de la table paiement
@@ -81,7 +81,7 @@ public class EnfantFactureAnnuelle
 		Payment payementAnnuelle = metier.getPaymentAnnuelle(idEnf, anneeFact, naturePaiement);
 		
 	
-		//System.out.println("payementAnnuelle : " + payementAnnuelle.getMoisPayment());
+		////System.out.println("payementAnnuelle : " + payementAnnuelle.getMoisPayment());
 		
 		
 		

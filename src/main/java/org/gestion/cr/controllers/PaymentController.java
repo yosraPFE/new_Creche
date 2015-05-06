@@ -35,7 +35,7 @@ public class PaymentController {
 		
 		
 		if(paymentMoisEnCours == null){
-			System.out.println("si pas de payment pour cet mois --> creer un paiment");
+			//System.out.println("si pas de payment pour cet mois --> creer un paiment");
 			// si pas de payment pour cet mois --> creer un paiment
 			
 					//avoir String date mois-annee
@@ -84,7 +84,7 @@ public class PaymentController {
 			
 			
 		}else if (paymentMoisEnCours.getDatePayement() != null){
-			System.out.println("paiment de cet mois payé --> creer ou non le payment du mois suivant");
+			//System.out.println("paiment de cet mois payé --> creer ou non le payment du mois suivant");
 			// paiment de cet mois payé --> creer ou non le payment du mois suivant
 			String nextYearMounthString = null;
 			String[] yearMounthStringTab = yearMounthString.split("-");
@@ -109,7 +109,7 @@ public class PaymentController {
 			//avoir le payment du mois suivant
 			Payment prochainPayment = metier.getPayementMoisCourant(idEnf, nextYearMounthString);
 			if(prochainPayment == null){
-				System.out.println("prochain payment n'existe pas --> creer payment pour moi suivant");
+				//System.out.println("prochain payment n'existe pas --> creer payment pour moi suivant");
 				//prochain payment n'existe pas --> creer payment pour moi suivant
 				
 						//avoir String date mois-annee

@@ -89,12 +89,12 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 		List<Enfant> listEnfant = metier.listEnfants();
 		
 		model.addAttribute("enfants", listEnfant);
-		System.out.println("1");
+		//System.out.println("1");
 	
 		Date di = new Date();
 		SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 		String yearIns = dfi.format(di);	
-		System.out.println("2");
+		//System.out.println("2");
 
 		
 		List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -102,10 +102,10 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 		List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 		
 		
-		System.out.println("3");
+		//System.out.println("3");
 		int index = 0;
 		for(Enfant fn : listEnfant){
-			System.out.println("4");
+			//System.out.println("4");
 			
 			listDatesInscriptions.add(index, "Pas Inscrit");
 			listNomsClassesFn.add(index, "Pas Inscrit");
@@ -142,12 +142,12 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<Enfant> listEnfant = metier.listEnfants();
 			
 			model.addAttribute("enfants", listEnfant);
-			System.out.println("1");
+			//System.out.println("1");
 		
 			Date di = new Date();
 			SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 			String yearIns = dfi.format(di);	
-			System.out.println("2");
+			//System.out.println("2");
 
 			
 			List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -155,10 +155,10 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 			
 			
-			System.out.println("3");
+			//System.out.println("3");
 			int index = 0;
 			for(Enfant fn : listEnfant){
-				System.out.println("4");
+				//System.out.println("4");
 				
 				listDatesInscriptions.add(index, "Pas Inscrit");
 				listNomsClassesFn.add(index, "Pas Inscrit");
@@ -206,12 +206,12 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<Enfant> listEnfant = metier.listEnfants();
 			
 			model.addAttribute("enfants", listEnfant);
-			System.out.println("1");
+			//System.out.println("1");
 		
 			Date di = new Date();
 			SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 			String yearIns = dfi.format(di);	
-			System.out.println("2");
+			//System.out.println("2");
 
 			
 			List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -219,10 +219,10 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 			
 			
-			System.out.println("3");
+			//System.out.println("3");
 			int index = 0;
 			for(Enfant fn : listEnfant){
-				System.out.println("4");
+				//System.out.println("4");
 				
 				listDatesInscriptions.add(index, "Pas Inscrit");
 				listNomsClassesFn.add(index, "Pas Inscrit");
@@ -272,12 +272,12 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<Enfant> listEnfant = metier.listEnfants();
 			
 			model.addAttribute("enfants", listEnfant);
-			System.out.println("1");
+			//System.out.println("1");
 		
 			Date di = new Date();
 			SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 			String yearIns = dfi.format(di);	
-			System.out.println("2");
+			//System.out.println("2");
 
 			
 			List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -285,10 +285,10 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 			List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 			
 			
-			System.out.println("3");
+			//System.out.println("3");
 			int index = 0;
 			for(Enfant fn : listEnfant){
-				System.out.println("4");
+				//System.out.println("4");
 				
 				listDatesInscriptions.add(index, "Pas Inscrit");
 				listNomsClassesFn.add(index, "Pas Inscrit");
@@ -328,12 +328,12 @@ public class EnfantListeAdminController implements HandlerExceptionResolver
 List<Enfant> listEnfant = metier.listEnfants();
 		
 		model.addAttribute("enfants", listEnfant);
-		System.out.println("1");
+		//System.out.println("1");
 	
 		Date di = new Date();
 		SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 		String yearIns = dfi.format(di);	
-		System.out.println("2");
+		//System.out.println("2");
 
 		
 		List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -341,10 +341,10 @@ List<Enfant> listEnfant = metier.listEnfants();
 		List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 		
 		
-		System.out.println("3");
+		//System.out.println("3");
 		int index = 0;
 		for(Enfant fn : listEnfant){
-			System.out.println("4");
+			//System.out.println("4");
 			
 			listDatesInscriptions.add(index, "Pas Inscrit");
 			listNomsClassesFn.add(index, "Pas Inscrit");
@@ -393,9 +393,9 @@ List<Enfant> listEnfant = metier.listEnfants();
 		//setPage(page);
 		/*Enfant enf = metier.getEnfant(idEnfant);
 		List<Parent> parents = (List<Parent>) enf.getParents();
-		System.out.println(parents.size());
+		//System.out.println(parents.size());
 		for (Parent p : parents){
-			System.out.println(p.getIdPerson());
+			//System.out.println(p.getIdPerson());
 			metier.supprimerEnfantDeListeParent(p.getIdPerson(), idEnfant);
 			metier.modifierParent(p);
 		}*/
@@ -405,12 +405,12 @@ List<Enfant> listEnfant = metier.listEnfants();
 List<Enfant> listEnfant = metier.listEnfants();
 		
 		model.addAttribute("enfants", listEnfant);
-		System.out.println("1");
+		//System.out.println("1");
 	
 		Date di = new Date();
 		SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 		String yearIns = dfi.format(di);	
-		System.out.println("2");
+		//System.out.println("2");
 
 		
 		List<Inscription> listInscriptionsFn = metier.listInscriptions();
@@ -418,10 +418,10 @@ List<Enfant> listEnfant = metier.listEnfants();
 		List<String> listNomsClassesFn = new ArrayList<String>(listDatesInscriptions.size());
 		
 		
-		System.out.println("3");
+		//System.out.println("3");
 		int index = 0;
 		for(Enfant fn : listEnfant){
-			System.out.println("4");
+			//System.out.println("4");
 			
 			listDatesInscriptions.add(index, "Pas Inscrit");
 			listNomsClassesFn.add(index, "Pas Inscrit");

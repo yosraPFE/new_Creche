@@ -255,8 +255,8 @@ public class TestJPA {
 					    List<Enfant> enf=metier.EnfantParMotCle("yosra");
 					    for(Enfant en:enf)
 					    {
-					    	System.out.println("***********");
-					    	System.out.println(en.getNom());
+					    	//System.out.println("***********");
+					    	//System.out.println(en.getNom());
 					    }
 					    /*
 					    

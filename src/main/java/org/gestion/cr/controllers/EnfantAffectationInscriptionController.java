@@ -80,16 +80,16 @@ public class EnfantAffectationInscriptionController
 					
 					Long nbrMaxLong = new Long(nbrMaxInt);
 					
-					System.out.println("1-1");
+					//System.out.println("1-1");
 					Long nbrResv = metier.nbrEnfantClasse(clEnCours.getIdClasse());
-					System.out.println("1-2 : " + nbrResv);
+					//System.out.println("1-2 : " + nbrResv);
 					
 					Long placeRestantes = nbrMaxLong - nbrResv;
-					System.out.println("1-3");
+					//System.out.println("1-3");
 					listPlacesRestantes.add(cptCl, placeRestantes);
-					System.out.println("1-4");
+					//System.out.println("1-4");
 				}
-				System.out.println("2");
+				//System.out.println("2");
 				
 				model.addAttribute("listClasses", listClasses);
 				model.addAttribute("listPlacesRestantes",listPlacesRestantes);
@@ -130,16 +130,16 @@ public class EnfantAffectationInscriptionController
 			
 			Long nbrMaxLong = new Long(nbrMaxInt);
 			
-			System.out.println("1-1");
+			//System.out.println("1-1");
 			Long nbrResv = metier.nbrEnfantClasse(clEnCours.getIdClasse());
-			System.out.println("1-2 : " + nbrResv);
+			//System.out.println("1-2 : " + nbrResv);
 			
 			Long placeRestantes = nbrMaxLong - nbrResv;
-			System.out.println("1-3");
+			//System.out.println("1-3");
 			listPlacesRestantes.add(cptCl, placeRestantes);
-			System.out.println("1-4");
+			//System.out.println("1-4");
 		}
-		System.out.println("2");
+		//System.out.println("2");
 		
 		model.addAttribute("listClasses", listClasses);
 		model.addAttribute("listPlacesRestantes",listPlacesRestantes);

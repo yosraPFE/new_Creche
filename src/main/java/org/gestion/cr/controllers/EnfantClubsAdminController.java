@@ -171,9 +171,9 @@ public class EnfantClubsAdminController implements HandlerExceptionResolver
 		//setPage(page);
 		/*Enfant enf = metier.getEnfant(idEnfant);
 		List<Parent> parents = (List<Parent>) enf.getParents();
-		System.out.println(parents.size());
+		//System.out.println(parents.size());
 		for (Parent p : parents){
-			System.out.println(p.getIdPerson());
+			//System.out.println(p.getIdPerson());
 			metier.supprimerEnfantDeListeParent(p.getIdPerson(), idEnfant);
 			metier.modifierParent(p);
 		}*/

@@ -57,7 +57,7 @@ public class ConsultationEnfantDescription
 		EquipeSanitaire eqSanConsultation = derniereConsultation.getEquipeSanitaire();
 		
 
-		//System.out.println("payementAnnuelle : " + payementAnnuelle.getMoisPayment());
+		////System.out.println("payementAnnuelle : " + payementAnnuelle.getMoisPayment());
 		
 		
 	

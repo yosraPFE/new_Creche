@@ -52,7 +52,7 @@ public class ClubListeEnfants
 			List<ClubEnfant> listEnfantsActifsClubs = metier.ListEnfantsActifsClubs(idClub);
 			
 			
-			System.out.println("listEnfantsActifsClubs : " + listEnfantsActifsClubs.get(0).getEnfant().getNom());
+			//System.out.println("listEnfantsActifsClubs : " + listEnfantsActifsClubs.get(0).getEnfant().getNom());
 			
 			
 			//List<ClubEnfant> listEnfantsClubs=metier.EnfantParClub(idClub);
