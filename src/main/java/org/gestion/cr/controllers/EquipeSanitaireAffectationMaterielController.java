@@ -9,35 +9,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
-
 import org.apache.commons.io.IOUtils;
-import org.gestion.cr.entities.Classe;
-import org.gestion.cr.entities.ClasseEquipeEducatif;
-import org.gestion.cr.entities.Club;
-import org.gestion.cr.entities.ClubEnfant;
-import org.gestion.cr.entities.Enfant;
-import org.gestion.cr.entities.EquipeEducatif;
 import org.gestion.cr.entities.EquipeSanitaire;
-import org.gestion.cr.entities.Evenement;
-import org.gestion.cr.entities.EvennementEnfant;
-import org.gestion.cr.entities.Inscription;
 import org.gestion.cr.entities.Materiel;
 import org.gestion.cr.entities.MatrielSanitaUtiliser;
-import org.gestion.cr.entities.MatrielUtiliser;
 import org.gestion.cr.metier.IAdminMetier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(value = "/adminEqSanMater")
@@ -54,6 +36,7 @@ public class EquipeSanitaireAffectationMaterielController
 		Date d = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String timeAndDate = df.format(d);
+		
 		Date timeAndDateFormat = df.parse(timeAndDate);
 									
 		// Ancienne list des Ids Materiels Equipe Sanitaire
@@ -66,7 +49,7 @@ public class EquipeSanitaireAffectationMaterielController
 			listIdMaterielActifEqSanitaireA.add(k, listMaterielActifsEqSanitaire.get(k).getMateriel().getIdMateriel());
 	    }
 
-		// traitement des Materiel selectionnés
+		// traitement des Materiel selectionnes
 		if (checkedMateriel != null) {
 		String[] materielSelectionnes = checkedMateriel.split(",");
 		List<Long> listIdMaterielChecked = new ArrayList<Long>(materielSelectionnes.length);
@@ -76,9 +59,8 @@ public class EquipeSanitaireAffectationMaterielController
 		}
 
 		for (int j = 0; j < listIdMaterielChecked.size(); j++)
-
 	    {
-			// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+			// si l'ID selectionne n existe pas deja --> nouvellement cochet
 			if (!listIdMaterielActifEqSanitaireA.contains(listIdMaterielChecked.get(j))) {
 
 				MatrielSanitaUtiliser matEqSan = new MatrielSanitaUtiliser();
@@ -92,8 +74,8 @@ public class EquipeSanitaireAffectationMaterielController
 		for (int f = 0; f < listIdMaterielActifEqSanitaireA.size(); f++)
 
 		{
-		// si l'ancien ID n'existe pas dans les ID selectionnés -->
-		// nouvellement décochet
+		// si l'ancien ID n existe pas dans les ID selectionnes -->
+		// nouvellement decochet
 		if (!listIdMaterielChecked.contains(listIdMaterielActifEqSanitaireA.get(f))) {
 
 			MatrielSanitaUtiliser matEqSan = listMaterielActifsEqSanitaire.get(f);
@@ -132,7 +114,7 @@ public class EquipeSanitaireAffectationMaterielController
 		
 		
 		
-		//traitemetn des Materiels deja selectionné
+		//traitemetn des Materiels deja selectionne
 		
 		List<MatrielSanitaUtiliser> listMaterielActifsEqSanitaire = metier
 								.ListMaterielActifsEqSanitaire(idEquiSanitaire);
