@@ -57,7 +57,7 @@ public class EnfantAffectationEvennementController
 		listIdEvenementActifEnfantA.add(k, listEvenementActifsEnfant.get(k).getEvenement().getIdEvenement());
 		}
 
-		// traitement des Evennements selectionnés
+		// traitement des Evennements selectionnes
 		if (checkedEvennement != null) {
 		String[] evennementsSelectionnes = checkedEvennement.split(",");
 		List<Long> listIdEvennementChecked = new ArrayList<Long>(evennementsSelectionnes.length);
@@ -69,7 +69,7 @@ public class EnfantAffectationEvennementController
 		for (int j = 0; j < listIdEvennementChecked.size(); j++)
 
 		{
-		// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+		// si l ID selectionne n existe pas deja --> nouvellement cochet
 		if (!listIdEvenementActifEnfantA.contains(listIdEvennementChecked.get(j))) {
 
 		EvennementEnfant evenEnf = new EvennementEnfant();
@@ -87,8 +87,8 @@ public class EnfantAffectationEvennementController
 		for (int f = 0; f < listIdEvenementActifEnfantA.size(); f++)
 
 		{
-		// si l'ancien ID n'existe pas dans les ID selectionnés -->
-		// nouvellement décochet
+		// si l ancien ID n existe pas dans les ID selectionnes -->
+		// nouvellement decochet
 		if (!listIdEvennementChecked.contains(listIdEvenementActifEnfantA.get(f))) {
 
 		EvennementEnfant evenEnf = listEvenementActifsEnfant.get(f);

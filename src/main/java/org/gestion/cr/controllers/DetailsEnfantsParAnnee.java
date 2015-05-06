@@ -57,7 +57,7 @@ public class DetailsEnfantsParAnnee
 		
 		
 		
-		//avoir l'inscription et la classe
+		//avoir l inscription et la classe
 		
 		Date di = new Date();
 		SimpleDateFormat dfi = new SimpleDateFormat("yyyy");

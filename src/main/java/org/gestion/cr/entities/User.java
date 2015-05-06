@@ -18,7 +18,7 @@ public class User implements Serializable {
 	private Long iduser;
 	private String username;
 	private String password;
-	// verifier si l'utilisateur est activé ou non
+	// verifier si l'utilisateur est active ou non
 	private boolean actived;
 	@OneToMany
 	@JoinColumn(name = "iduser")

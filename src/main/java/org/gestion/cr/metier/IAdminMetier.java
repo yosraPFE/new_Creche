@@ -235,7 +235,7 @@ public interface IAdminMetier extends InternauteMetier
 		
 		
 		
-		//Gestion Matriel utilisé
+		//Gestion Matriel utilise
 		
 		
 				public MatrielUtiliser ajouterMatrielUtiliser(MatrielUtiliser m,Long idMat,Long idEqEducat,Date d);
@@ -246,7 +246,7 @@ public interface IAdminMetier extends InternauteMetier
 				
 				
 				
-				//Gestion Matriel Sanitaire  utilisé
+				//Gestion Matriel Sanitaire  utilise
 				
 				
 			   public MatrielSanitaUtiliser ajouterMatrielSanitaireUtiliser(MatrielSanitaUtiliser m,Long idMat,Long idSani,Date dateDebutUtilisation);

@@ -437,7 +437,7 @@ public interface ICrecheDAO
 		public List<Stock> listStock(int position,int nbrStocks); 
 		
 		
-		//Gestion Matriel utilisé
+		//Gestion Matriel utilise
 		
 		
 		public MatrielUtiliser ajouterMatrielUtiliser(MatrielUtiliser m,Long idMat,Long idEqEducat,Date d);
@@ -451,7 +451,7 @@ public interface ICrecheDAO
 		
 		
 		
-		//Gestion Matriel Sanitaire  utilisé
+		//Gestion Matriel Sanitaire  utilise
 		
 		
 	   public MatrielSanitaUtiliser ajouterMatrielSanitaireUtiliser(MatrielSanitaUtiliser m,Long idMat,Long idSani,Date dateDebutUtilisation);

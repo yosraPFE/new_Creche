@@ -43,7 +43,7 @@ public class EnfantAffectationPaiementClubPlanningController {
 			String checkedPlanning,float remise,double somme, Model model) throws ParseException {
 		
 		
-		//recherche de l'inscription
+		//recherche de l inscription
 		Date dai = new Date();
 		SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 		String yeari = dfi.format(dai);		
@@ -72,7 +72,7 @@ public class EnfantAffectationPaiementClubPlanningController {
 					.getIdClub());
 		}
 
-		// traitement des Clubs selectionnés
+		// traitement des Clubs selectionnes
 		if (checkedClubs != null) {
 			String[] clubsSelectionnes = checkedClubs.split(",");
 			List<Long> listIdClubChecked = new ArrayList<Long>(
@@ -85,7 +85,7 @@ public class EnfantAffectationPaiementClubPlanningController {
 			for (int j = 0; j < listIdClubChecked.size(); j++)
 
 			{
-				// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+				// si l ID selectionne n existe pas deja --> nouvellement cochet
 				if (!listIdClubActifEnfantA.contains(listIdClubChecked.get(j))) {
 
 					ClubEnfant clEnf = new ClubEnfant();
@@ -99,8 +99,8 @@ public class EnfantAffectationPaiementClubPlanningController {
 			for (int f = 0; f < listIdClubActifEnfantA.size(); f++)
 
 			{
-				// si l'ancien ID n'existe pas dans les ID selectionnés -->
-				// nouvellement décochet
+				// si l ancien ID n existe pas dans les ID selectionnes -->
+				// nouvellement decochet
 				if (!listIdClubChecked.contains(listIdClubActifEnfantA.get(f))) {
 
 					ClubEnfant clEnf = listClubActifsEnfant.get(f);
@@ -152,7 +152,7 @@ public class EnfantAffectationPaiementClubPlanningController {
 					.getPlanningHorraires().getIdPlanningH());
 		}
 
-		// traitement des Plannings selectionné
+		// traitement des Plannings selectionne
 
 		if (checkedPlanning != null) {
 			String[] planningsSelectionnes = checkedPlanning.split(",");
@@ -167,7 +167,7 @@ public class EnfantAffectationPaiementClubPlanningController {
 			for (int m = 0; m < listIdPlanningChecked.size(); m++)
 
 			{
-				// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+				// si l'ID selectionne n'existe pas deja --> nouvellement cochet
 				if (!listIdPlanningActifEnfantA.contains(listIdPlanningChecked
 						.get(m))) {
 
@@ -182,8 +182,8 @@ public class EnfantAffectationPaiementClubPlanningController {
 			for (int h = 0; h < listIdPlanningActifEnfantA.size(); h++)
 
 			{
-				// si l'ancien ID n'existe pas dans les ID selectionnés -->
-				// nouvellement décochet
+				// si l'ancien ID n'existe pas dans les ID selectionnes -->
+				// nouvellement decochet
 				if (!listIdPlanningChecked.contains(listIdPlanningActifEnfantA
 						.get(h))) {
 

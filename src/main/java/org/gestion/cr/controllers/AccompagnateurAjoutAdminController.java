@@ -69,7 +69,7 @@ public class AccompagnateurAjoutAdminController implements HandlerExceptionResol
 			
 			Long idAccompagnateur  = metier.ajouterAccompagnateur(accomp);
 			file.transferTo(new File(path+"/"+"ACCOMPAGNATEUR_" + idAccompagnateur + "_" + file.getOriginalFilename()));//il peut construire le nouveau nom
-			accomp.setNomPhoto(path+"/"+"ACCOMPAGNATEUR_" +idAccompagnateur + "_" + file.getOriginalFilename());//affecter le nom de la photo a l'acc precedement cree
+			accomp.setNomPhoto(path+"/"+"ACCOMPAGNATEUR_" +idAccompagnateur + "_" + file.getOriginalFilename());//affecter le nom de la photo a l acc precedement cree
 			metier.modifierAccompagnateurs(accomp);
 			
 		}

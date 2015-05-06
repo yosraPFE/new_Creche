@@ -63,7 +63,7 @@ public class EquipeEducatifAffectationClasseController
 		listIdClasseActifEqEducatifA.add(k, listClasseActifsEqEducatif.get(k).getClasse().getIdClasse());
 	}
 
-	// traitement des Classes selectionnés
+	// traitement des Classes selectionnes
 	if (checkedClass != null) {
 	String[] classesSelectionnes = checkedClass.split(",");
 	List<Long> listIdClasseChecked = new ArrayList<Long>(classesSelectionnes.length);
@@ -75,7 +75,7 @@ public class EquipeEducatifAffectationClasseController
 	for (int j = 0; j < listIdClasseChecked.size(); j++)
 
 	{
-    // si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+    // si l'ID selectionne n'existe pas deja --> nouvellement cochet
 	if (!listIdClasseActifEqEducatifA.contains(listIdClasseChecked.get(j))) {
 
 		ClasseEquipeEducatif classEqEdu = new ClasseEquipeEducatif();
@@ -88,8 +88,8 @@ public class EquipeEducatifAffectationClasseController
 	for (int f = 0; f < listIdClasseActifEqEducatifA.size(); f++)
 
 	{
-	// si l'ancien ID n'existe pas dans les ID selectionnés -->
-	// nouvellement décochet
+	// si l'ancien ID n'existe pas dans les ID selectionnes -->
+	// nouvellement decochet
 	if (!listIdClasseChecked.contains(listIdClasseActifEqEducatifA.get(f))) {
 
 		ClasseEquipeEducatif classEqEdu = listClasseActifsEqEducatif.get(f);
@@ -128,7 +128,7 @@ public class EquipeEducatifAffectationClasseController
 		
 		
 		
-		//traitemetn des classes deja selectionné
+		//traitemetn des classes deja selectionne
 		
 		List<ClasseEquipeEducatif> listClasseActifsEqEducatif = metier
 						.ListClasseActifsEquEducatif(idEquiEducatif);

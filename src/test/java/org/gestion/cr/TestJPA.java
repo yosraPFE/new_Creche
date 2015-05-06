@@ -49,7 +49,7 @@ public class TestJPA {
 	@Test
 	public void test132() 
 	{
-		//Test pour la configuration de la base des données
+		//Test pour la configuration de la base des donnees
 		try
 		     {
 			
@@ -109,8 +109,8 @@ public class TestJPA {
 				   metier.ajouterTypeMateriel(new TypeMateriels("Stylo"));
 				   metier.ajouterTypeMateriel(new TypeMateriels("Ordinateur"));
 				   metier.ajouterTypeMateriel(new TypeMateriels("stethoscope"));
-				   metier.ajouterTypeMateriel(new TypeMateriels("Balance impédancemètre"));
-				   metier.ajouterTypeMateriel(new TypeMateriels("Thermomètre "));
+				   metier.ajouterTypeMateriel(new TypeMateriels("Balance impedancemetre"));
+				   metier.ajouterTypeMateriel(new TypeMateriels("Thermometre "));
 				   List<TypeMateriels> listTypeMateriels2=metier.listTypeMateriels();
 				   
 				   assertTrue(listTypeMateriels1.size()+6==listTypeMateriels2.size());
@@ -160,11 +160,11 @@ public class TestJPA {
 					
 					   
 					   List<Classe> listClasses1=metier.listClasse();
-					   metier.ajouterClasse(new Classe("Mon bébé (Petite Section)", 20));
+					   metier.ajouterClasse(new Classe("Mon bebe (Petite Section)", 20));
 					   metier.ajouterClasse(new Classe("Mon Petit (Moyenne Section)", 20));
 					   metier.ajouterClasse(new Classe("Barem (Petite Section)", 30));
 					   metier.ajouterClasse(new Classe("Coccinelle (Moyenne Section)", 30));
-					   metier.ajouterClasse(new Classe("Les Grands(Grande Section : classe Préparatoire)", 3));
+					   metier.ajouterClasse(new Classe("Les Grands(Grande Section : classe Preparatoire)", 3));
 					   List<Classe> listClasses2=metier.listClasse();
 					   
 					   
@@ -181,7 +181,7 @@ public class TestJPA {
 					   metier.ajouterPlanningHorraires(new PlanningHorraires("Garde entre 16h30 et 18h", 10.0));
 					   metier.ajouterPlanningHorraires(new PlanningHorraires("Garde entre 7h et 8h30", 10.0));
 					   metier.ajouterPlanningHorraires(new PlanningHorraires("Garde Samedi", 20.0));
-					   metier.ajouterPlanningHorraires(new PlanningHorraires("Menu Integré", 15.0));
+					   metier.ajouterPlanningHorraires(new PlanningHorraires("Menu Integre", 15.0));
 					  
 					   List<PlanningHorraires> listPlanningHorraires2=metier.listPlanningHorraires();
 					   

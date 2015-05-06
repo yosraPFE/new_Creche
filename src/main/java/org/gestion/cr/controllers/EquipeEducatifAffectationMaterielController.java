@@ -64,7 +64,7 @@ public class EquipeEducatifAffectationMaterielController
 			listIdMaterielActifEqEducatifA.add(k, listMaterielActifsEqEducatif.get(k).getMateriel().getIdMateriel());
 		}
 
-		// traitement des Materiel selectionnés
+		// traitement des Materiel selectionnes
 		if (checkedMateriel != null) {
 		String[] materielSelectionnes = checkedMateriel.split(",");
 		List<Long> listIdMaterielChecked = new ArrayList<Long>(materielSelectionnes.length);
@@ -76,7 +76,7 @@ public class EquipeEducatifAffectationMaterielController
 		for (int j = 0; j < listIdMaterielChecked.size(); j++)
 
 		{
-	    // si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+	    // si l'ID selectionne n'existe pas deja --> nouvellement cochet
 		if (!listIdMaterielActifEqEducatifA.contains(listIdMaterielChecked.get(j))) {
 
 			MatrielUtiliser matEqEdu = new MatrielUtiliser();
@@ -90,8 +90,8 @@ public class EquipeEducatifAffectationMaterielController
 		for (int f = 0; f < listIdMaterielActifEqEducatifA.size(); f++)
 
 		{
-		// si l'ancien ID n'existe pas dans les ID selectionnés -->
-		// nouvellement décochet
+		// si l'ancien ID n'existe pas dans les ID selectionnes -->
+		// nouvellement decochet
 		if (!listIdMaterielChecked.contains(listIdMaterielActifEqEducatifA.get(f))) {
 
 			MatrielUtiliser matEqEdu = listMaterielActifsEqEducatif.get(f);
@@ -129,7 +129,7 @@ public class EquipeEducatifAffectationMaterielController
 		model.addAttribute("equipeEducatif", metier.getEquipeEducatif(idEquiEducatif));
 
 
-		//traitemetn des Materiels deja selectionné
+		//traitemetn des Materiels deja selectionne
 		
 		List<MatrielUtiliser> listMaterielActifsEqEducatif = metier
 						.ListMaterielActifsEqEducatif(idEquiEducatif);

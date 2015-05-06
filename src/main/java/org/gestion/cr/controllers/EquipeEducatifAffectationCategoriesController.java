@@ -63,7 +63,7 @@ public class EquipeEducatifAffectationCategoriesController
 			listIdCategorieActifEqEducatifA.add(k, listCategoriesActifsEqEducatif.get(k).getCategorieClub().getIdCategorie());
 	    }
 
-		// traitement des Categories selectionnés
+		// traitement des Categories selectionnes
 		if (checkedCategorie != null) {
 		String[] categoriesSelectionnes = checkedCategorie.split(",");
 		List<Long> listIdCategorieChecked = new ArrayList<Long>(categoriesSelectionnes.length);
@@ -75,7 +75,7 @@ public class EquipeEducatifAffectationCategoriesController
 		for (int j = 0; j < listIdCategorieChecked.size(); j++)
 
 		{
-		// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+		// si l'ID selectionne n'existe pas deja --> nouvellement cochet
 		if (!listIdCategorieActifEqEducatifA.contains(listIdCategorieChecked.get(j))) {
 
 		CategorieClubEquipeEducatif catEqEdu = new CategorieClubEquipeEducatif();
@@ -88,8 +88,8 @@ public class EquipeEducatifAffectationCategoriesController
 		for (int f = 0; f < listIdCategorieActifEqEducatifA.size(); f++)
 
 		{
-		// si l'ancien ID n'existe pas dans les ID selectionnés -->
-		// nouvellement décochet
+		// si l'ancien ID n'existe pas dans les ID selectionnes -->
+		// nouvellement decochet
 		if (!listIdCategorieChecked.contains(listIdCategorieActifEqEducatifA.get(f))) {
 
 		CategorieClubEquipeEducatif catEqEdu = listCategoriesActifsEqEducatif.get(f);
@@ -126,7 +126,7 @@ public class EquipeEducatifAffectationCategoriesController
 		model.addAttribute("equipeEducatif", metier.getEquipeEducatif(idEquiEducatif));
 		
 		
-		//traitemetn des categories deja selectionné
+		//traitemetn des categories deja selectionne
 		
 		List<CategorieClubEquipeEducatif> listCategoriesActifsEqEducatif = metier
 				.ListCategorieClubActifsEquipeEducatif(idEquiEducatif);

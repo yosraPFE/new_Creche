@@ -39,7 +39,7 @@ public class EnfantAffectationClubPlanningController {
 		
 		
 		
-		//recherche de l'inscription
+		//recherche de l inscription
 				Date dai = new Date();
 				SimpleDateFormat dfi = new SimpleDateFormat("yyyy");
 				String yeari = dfi.format(dai);		
@@ -72,7 +72,7 @@ public class EnfantAffectationClubPlanningController {
 					.getIdClub());
 		}
 
-		// traitement des Clubs selectionnés
+		// traitement des Clubs selectionnes
 		if (checkedClubs != null) {
 			String[] clubsSelectionnes = checkedClubs.split(",");
 			List<Long> listIdClubChecked = new ArrayList<Long>(
@@ -85,7 +85,7 @@ public class EnfantAffectationClubPlanningController {
 			for (int j = 0; j < listIdClubChecked.size(); j++)
 
 			{
-				// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+				// si l ID selectionne n existe pas deja --> nouvellement cochet
 				if (!listIdClubActifEnfantA.contains(listIdClubChecked.get(j))) {
 
 					ClubEnfant clEnf = new ClubEnfant();
@@ -99,8 +99,8 @@ public class EnfantAffectationClubPlanningController {
 			for (int f = 0; f < listIdClubActifEnfantA.size(); f++)
 
 			{
-				// si l'ancien ID n'existe pas dans les ID selectionnés -->
-				// nouvellement décochet
+				// si l ancien ID n. existe pas dans les ID selectionnes -->
+				// nouvellement decochet
 				if (!listIdClubChecked.contains(listIdClubActifEnfantA.get(f))) {
 
 					ClubEnfant clEnf = listClubActifsEnfant.get(f);
@@ -152,7 +152,7 @@ public class EnfantAffectationClubPlanningController {
 					.getPlanningHorraires().getIdPlanningH());
 		}
 
-		// traitement des Plannings selectionné
+		// traitement des Plannings selectionne
 
 		if (checkedPlanning != null) {
 			String[] planningsSelectionnes = checkedPlanning.split(",");
@@ -167,7 +167,7 @@ public class EnfantAffectationClubPlanningController {
 			for (int m = 0; m < listIdPlanningChecked.size(); m++)
 
 			{
-				// si l'ID selectionné n'existe pas déjà --> nouvellement cochet
+				// si l ID selectionne n existe pas deja --> nouvellement cochet
 				if (!listIdPlanningActifEnfantA.contains(listIdPlanningChecked
 						.get(m))) {
 
@@ -182,8 +182,8 @@ public class EnfantAffectationClubPlanningController {
 			for (int h = 0; h < listIdPlanningActifEnfantA.size(); h++)
 
 			{
-				// si l'ancien ID n'existe pas dans les ID selectionnés -->
-				// nouvellement décochet
+				// si l ancien ID n existe pas dans les ID selectionnes -->
+				// nouvellement decochet
 				if (!listIdPlanningChecked.contains(listIdPlanningActifEnfantA
 						.get(h))) {
 
@@ -238,16 +238,16 @@ public class EnfantAffectationClubPlanningController {
 			metier.ajouterPayment(newPayment, idEnf, yearMounthString);
 			
 		}else if (dernierPayment.getDatePayement() == null){
-			//System.out.println("payment creer non paye --> mise à jour");
-			//payment creer non paye --> mise à jour
+			//System.out.println("payment creer non paye --> mise a jour");
+			//payment creer non paye --> mise a jour
 			newPayment.setEnfant(metier.getEnfant(idEnf));
 			newPayment.setMoisPayment(yearMounthString);			
 			metier.modifierPayment(newPayment);
 			
 			
 		}else{
-			//System.out.println("payment cree et payé --> creer le payment du mois suivant");
-			//payment cree et payé --> creer le payment du mois suivant
+			//System.out.println("payment cree et paye --> creer le payment du mois suivant");
+			//payment cree et paye --> creer le payment du mois suivant
 			
 			//construction du mois suivant
 			String nextYearMounthString = null;
@@ -271,7 +271,7 @@ public class EnfantAffectationClubPlanningController {
 			//avoir le payment du mois suivant
 			Payment prochainPayment = metier.getPayementMoisCourant(idEnf, nextYearMounthString);
 			if( prochainPayment == null){
-				//prochain payment n'existe pas
+				//prochain payment n existe pas
 				metier.ajouterPayment(newPayment, idEnf, nextYearMounthString);	
 			}else{
 				newPayment.setEnfant(metier.getEnfant(idEnf));
@@ -314,12 +314,12 @@ public class EnfantAffectationClubPlanningController {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy");
 		String year = df.format(da);		
 		
-		//avoir le dernier payment de l'enfant pour avoir le remise
+		//avoir le dernier payment de l enfant pour avoir le remise
 		List<Payment> listDesPaymentPourEnf = metier.listPaymentEnfant(idEnf);
 		Payment dernierPayment = listDesPaymentPourEnf.get(listDesPaymentPourEnf.size()-1);
 		model.addAttribute("dernierPayment", dernierPayment);
 		
-		//avoir l'etat de la creche cette annee pour avoir le tarif par mois
+		//avoir l etat de la creche cette annee pour avoir le tarif par mois
 		Creche crecheAnnee = metier.getCreche(year); 
 		model.addAttribute("crecheAnnee", crecheAnnee);
 		

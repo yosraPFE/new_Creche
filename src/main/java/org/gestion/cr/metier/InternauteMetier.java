@@ -360,7 +360,7 @@ public interface InternauteMetier
 	public List<Stock> listStock(int position,int nbrStocks); 
 	
 	
-	//Gestion Matriel utilisé
+	//Gestion Matriel utilise
 	
 	
 			public List<MatrielUtiliser> listMatrielUtiliser();
@@ -371,7 +371,7 @@ public interface InternauteMetier
 			
 			
 			
-			//Gestion Matriel Sanitaire  utilisé
+			//Gestion Matriel Sanitaire  utilise
 			
 			
 		   public List<MatrielSanitaUtiliser> listMatrielSanitaireUtiliser();

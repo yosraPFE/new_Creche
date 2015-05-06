@@ -84,8 +84,8 @@ public class PaymentController {
 			
 			
 		}else if (paymentMoisEnCours.getDatePayement() != null){
-			//System.out.println("paiment de cet mois payé --> creer ou non le payment du mois suivant");
-			// paiment de cet mois payé --> creer ou non le payment du mois suivant
+			//System.out.println("paiment de cet mois paye --> creer ou non le payment du mois suivant");
+			// paiment de cet mois paye --> creer ou non le payment du mois suivant
 			String nextYearMounthString = null;
 			String[] yearMounthStringTab = yearMounthString.split("-");
 			int monthToIncrement = Integer.parseInt(yearMounthStringTab[1]);

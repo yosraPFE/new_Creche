@@ -104,7 +104,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 
 			setCas(0);
 			model.addAttribute("cas", getCas());
-			//********* afficher les details et le bouton affecter à une classe
+			//********* afficher les details et le bouton affecter a une classe
 			return "redirect:/adminInsA/index?idEnfant="+idEnfant;
 			
 		}else if(btnChoisi.equals("Ajouter_Autre_Parent")){
@@ -156,7 +156,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			//model.addAttribute("enfant",new Enfant());
 			setCas(0);
 			model.addAttribute("cas", getCas());
-			//********* afficher les details 2 parent et le bouton affecter à une classe
+			//********* afficher les details 2 parent et le bouton affecter a une classe
 			return "redirect:/adminInsA/index?idEnfant="+getUnEnfant().getIdPerson();
 			
 		}else{
@@ -206,7 +206,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			model.addAttribute("enfant",new Enfant());
 			setCas(0);
 			model.addAttribute("cas", getCas());
-			//********* afficher les details 2 parent et le bouton affecter à une classe
+			//********* afficher les details 2 parent et le bouton affecter a une classe
 			return "redirect:/adminInsA/index?idEnfant="+getUnEnfant().getIdPerson();
 			
 		}else{
@@ -305,7 +305,7 @@ public class EnfantAjoutParentAccompagnateurAdminController   implements Handler
 			    try {
 			    	 fos.write(fileEnf.getBytes());
 				} catch (Exception e) {
-					 ////System.out.println("problème de déplacement du fichier ");
+					 ////System.out.println("probleme de deplacement du fichier ");
 				}
 			   
 			   
